@@ -1,0 +1,278 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = 'ð¥ Hoop Central 6 ð¥';
+    Text = "You Have Accepted The Terms And Services!";
+    Duration = 120;
+})
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("ð¥ Hoop Central 6 ð¥ ") -- Creates the window
+
+local b = w:CreateFolder("Main Menu ð±ï¸") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("Settings ð±ï¸")
+
+b:Button("Aimbot 100% ð¥",function()
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "q" then
+local args = {
+    [1] = true,
+    [2] = "Idle",
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+wait(0.40)
+
+
+local args = {
+    [1] = false,
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+end
+end)
+end)
+
+
+b:Button("MovingShot 100% ð¥",function()
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "f" then
+local args = {
+    [1] = true,
+    [2] = "Run",
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+wait(0.50)
+
+
+local args = {
+    [1] = false,
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+end
+end)
+end)
+
+b:Button("Anticontest 100% ð¥",function()
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "3" then
+     _G.HackedHipHeight = (22)
+ 
+local Plrs = game:GetService("Players")
+ 
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+ 
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end
+ 
+ 
+MyPlr.CharacterAdded:connect(function(Char)
+MyChar = Char
+repeat wait() until Char:FindFirstChild("Humanoid")
+local Hum = Char.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeightHipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end)
+local args = {
+    [1] = true,
+    [2] = "Idle",
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+wait(0.40)
+
+
+local args = {
+    [1] = false,
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.server.shoot:FireServer(unpack(args))
+end
+wait(1)
+_G.HackedHipHeight = (2.71)
+ 
+local Plrs = game:GetService("Players")
+ 
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+ 
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end
+ 
+ 
+MyPlr.CharacterAdded:connect(function(Char)
+MyChar = Char
+repeat wait() until Char:FindFirstChild("Humanoid")
+local Hum = Char.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeightHipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end)
+end)
+end)
+
+b:Button("Break Ankles ð¥",function()
+
+
+    local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character
+game:GetService("Workspace")character.HumanoidRootPart.Size = Vector3.new(20,2.3,20)
+
+
+end)
+
+b:Button("Inf Stamina ð¥",function()
+    local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character
+
+
+while true do
+game:GetService("Workspace")character.Values.stamina.Value = "1000"
+game:GetService("Workspace")character.Stamina.Current.Visible = false
+game:GetService("Workspace")character.Stamina.Background.ImageColor3 = Color3.new(0,255,0)
+wait(0.5)
+end
+    
+end)
+
+b:Label("{NOT WORKING}",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+b:Toggle("Ball Mag",function(bool)
+    shared.toggle = bool
+    print(shared.toggle)
+end)
+
+b:Toggle("Hide Name",function(bool)
+    shared.toggle = bool
+    print(shared.toggle)
+end)
+
+b:Toggle("AutoSprint",function(bool)
+   
+Callback = function()
+if bool then 
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character
+
+while true do
+game:GetService("Workspace")character.Values.sprinting.Value = true
+wait(0.5)
+end
+end
+end
+end)
+
+b:Slider("HipHeight",{
+    min = 2.71; -- min value of the slider
+    max = 50; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(HipHeight)
+_G.HackedHipHeight = (HipHeight)
+ 
+local Plrs = game:GetService("Players")
+ 
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+ 
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end
+ 
+ 
+MyPlr.CharacterAdded:connect(function(Char)
+MyChar = Char
+repeat wait() until Char:FindFirstChild("Humanoid")
+local Hum = Char.Humanoid
+Hum.Changed:connect(function()
+Hum.HipHeightHipHeight = _G.HackedHipHeight
+end)
+Hum.HipHeight = _G.HackedHipHeight
+end)
+end)
+
+b:Slider("Long Arms",{
+    min = 10; -- min value of the slider
+    max = 50; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    print(value)
+end)
+
+b:Slider("Walkspeed",{
+    min = 0; -- min value of the slider
+    max = 50; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+_G.HackedWalkSpeed = (value)
+ 
+local Plrs = game:GetService("Players")
+ 
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+ 
+if MyChar then
+local Hum = MyChar.Humanoid
+Hum.Changed:connect(function()
+Hum.WalkSpeed = _G.HackedWalkSpeed
+end)
+Hum.WalkSpeed = _G.HackedWalkSpeed
+end
+ 
+ 
+MyPlr.CharacterAdded:connect(function(Char)
+MyChar = Char
+repeat wait() until Char:FindFirstChild("Humanoid")
+local Hum = Char.Humanoid
+Hum.Changed:connect(function()
+Hum.WalkSpeed = _G.HackedWalkSpeed
+end)
+Hum.WalkSpeed = _G.HackedWalkSpeed
+end)
+end)
+
+c:Button("Owner Nico!",function()
+    print("Elym Winning")
+end)
+c:Button("Subscribe To Nico!!!!",function()
+  setclipboard("https://www.youtube.com/c/LazyyExploiter/videos")
+  game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = 'ð¥ Hoop Central 6 ð¥';
+    Text = "Youtube Link Copied To Clipboard";
+    Duration = 10;
+})
+end)
+
+c:DestroyGui()
